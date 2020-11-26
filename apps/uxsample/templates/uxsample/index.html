@@ -4,17 +4,19 @@
 <html lang="en">
 
 <head>
-
+    {% block meta %}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    {% endblock %}
 
     {% block title %}
     <title>Dashboard</title>
     {% endblock %}
 
+    {% block link %}
     <!-- Custom fonts for this template-->
     <link href="{% static 'uxsample/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
     <link
@@ -23,9 +25,10 @@
 
     <!-- Custom styles for this template-->
     <link href="{% static 'uxsample/css/sb-admin-2.min.css' %}" rel="stylesheet">
-
+    {% endblock %}
 </head>
 
+{% block body_upper %}
 <body id="page-top">
 
     <!-- Page Wrapper -->
@@ -742,7 +745,9 @@
             </div>
         </div>
     </div>
+    {% endblock %}
 
+    {% block js_core %}
     <!-- Bootstrap core JavaScript-->
     <script src="{% static 'uxsample/vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'uxsample/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
@@ -752,7 +757,9 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{% static 'uxsample/js/sb-admin-2.min.js' %}"></script>
+   {% endblock %}
 
+    {% block body_bottom %}
     {% block js %}
      <!-- Page level plugins -->
     <script src="{% static 'uxsample/vendor/chart.js/Chart.min.js' %}"></script>
@@ -761,8 +768,7 @@
     <script src="{% static 'uxsample/js/demo/chart-area-demo.js' %}"></script>
     <script src="{% static 'uxsample/js/demo/chart-pie-demo.js' %}"></script>
     {% endblock %}
-
-
 </body>
 
 </html>
+    {% endblock %}
