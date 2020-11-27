@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    <h2>Post List</h2>
+    <span>
+        <a href="{% url 'blog:post_archive' %}">Archive</a>
+    </span>
+
+    <p>
+        {% for post in posts %}
+            <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+            {{ post.mod_date|date:"N d, Y" }}
+        {% endfor %}
+    </p>
+    <br>
+    <div>
+        {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}">Previous Page</a>
+        {% endif %}
+
+        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+    
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}"> Next Page</a>
+        {% endif %} 
+    </div>
+
+</body>
+</html>
