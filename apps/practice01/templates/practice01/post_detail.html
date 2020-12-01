@@ -1,0 +1,16 @@
+{% extends "practice01/base.html" %}
+
+{% block title %}
+    <title>Blog {{ post.pk }}</title>
+{% endblock %}
+
+{% block content %}
+    <div>
+        <div class="date">
+            <p1>Published:{{ post.published_date }}</p1>
+        </div>
+        <a href="{% url 'practice01:post_edit' pk=post.pk %}">Edit Blog</a>
+        <h1>{{ post.title }}</h1>
+        <p1>{{ post.text }}</p1>
+    </div>
+{% endblock %}

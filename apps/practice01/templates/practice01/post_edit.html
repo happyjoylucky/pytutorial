@@ -1,0 +1,14 @@
+{% extends "practice01/base.html" %}
+
+{% block title %}
+    <title>Blog Editing</title>
+{% endblock %}
+
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="sublit" >submit</button>
+    </form>
+{% endblock %}

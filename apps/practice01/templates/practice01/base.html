@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+        <title>Blog Practice01</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href="{% static 'practice01/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'practice01/css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'practice01/css/practice01.css' %}">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" type="text/css">
+
+</head>
+<body>
+    <div class="page-header">
+        <a href="{% url 'practice01:post_new' %}" class="top-menu"><span>+New Blog</span></a>
+        <h1><a href="{% url 'practice01:post_list' %}">Blog Practice01</a></h1>
+    </div>
+
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

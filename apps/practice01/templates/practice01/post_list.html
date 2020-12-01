@@ -1,0 +1,17 @@
+{% extends "practice01/base.html" %}
+
+{% block title %}
+<title>Blog Lists</title>
+{% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                <p>Published:{{ post.published_date }}</p>
+            </div>
+            <h1><a href="{% url 'practice01:post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
