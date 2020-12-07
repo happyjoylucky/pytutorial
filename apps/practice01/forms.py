@@ -1,8 +1,8 @@
-from django import forms
+from django.forms import ModelForm
 from .models import BlogPractice
 
 
-class BlogPracticeForm(forms.ModelForm):
+class BlogPracticeForm(ModelForm):
 
     class Meta:
         model = BlogPractice

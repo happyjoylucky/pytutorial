@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="page-header">
+        <p><a href="{% url 'practice02:post_new' %}">Create New Blog +</a></p>
+        <h1><a href="{% url 'practice02:post_list' %}">Practice02</a></h1>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

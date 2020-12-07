@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'blogtutorial.apps.BlogtutorialConfig',
     'ckeditor',
     'practice01.apps.Practice01Config',
+    'practice02.apps.Practice02Config',
+    'stockexample.apps.StockexampleConfig',
 ]
 
 MIDDLEWARE = [

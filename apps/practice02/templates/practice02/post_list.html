@@ -1,0 +1,10 @@
+{% extends "practice02/base.html" %}
+
+{% block content %}
+    {% for post in posts %}
+        <p>Published: {{ post.published_date }}</p>
+        <h1><a href="{% url 'practice02:post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+        <button><a href="{% url 'practice02:post_edit' pk=post.pk %}">edit</a></button>
+        <p>{{ post.text }}</p>
+    {% endfor %}
+{% endblock %}

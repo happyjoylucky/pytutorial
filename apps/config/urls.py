@@ -22,4 +22,6 @@ urlpatterns = [
     path('uxsample/', include('uxsample.urls')),
     path('blogtutorial/', include('blogtutorial.urls')),
     path('practice01/', include('practice01.urls')),
+    path('practice02/', include('practice02.urls')),
+    path('stock/', include('stockexample.urls')),
 ]
