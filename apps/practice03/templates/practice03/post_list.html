@@ -1,0 +1,13 @@
+{% extends "practice03/base.html" %}
+
+{% block title %}
+<title>Post Lists</title>
+{% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text}}</p>
+        <p>published: {{ post.published_date }}</p>
+    {% endfor %}
+{% endblock %}

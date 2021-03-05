@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'practice01.apps.Practice01Config',
     'practice02.apps.Practice02Config',
     'stockexample.apps.StockexampleConfig',
+    'practice03.apps.Practice03Config',
 ]
 
 MIDDLEWARE = [
